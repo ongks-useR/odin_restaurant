@@ -1,16 +1,17 @@
 import "./template.css"
+import { displayMenu, displayContact } from "./header_items"
 
 
-// Create contents once the DOM is fully loaded
+// Create home page contents once the DOM is fully loaded
 window.addEventListener(
     'load',
     () => {
         const Heading = document.createElement('h1');
-        Heading.textContent = 'Manhattan Favourites';
+        Heading.textContent = 'The Manhattan Fish Market';
 
         const Img1 = document.createElement("img");
         Img1.setAttribute('class', 'favourite-pic');
-        Img1.setAttribute('src', "https://www.manhattanfishmarket.com/malaysia/wp-content/webpc-passthru.php?src=https://www.manhattanfishmarket.com/malaysia/wp-content/uploads/sites/2/2024/04/The-Manhattan-Star-Platter-3-scaled.jpg&nocache=1");
+        Img1.setAttribute('src', "https://www.manhattanfishmarket.com/malaysia/wp-content/webpc-passthru.php?src=https://www.manhattanfishmarket.com/malaysia/wp-content/uploads/sites/2/2020/03/Fulton-Market-2048x1365.jpg&nocache=1");
         Img1.setAttribute('alt', 'Favourites of Manhattan Fish Market');
 
         const Text1 = document.createElement('p');
@@ -33,3 +34,15 @@ window.addEventListener(
         contents.appendChild(pic_container);
     }
 )
+
+
+// Display Menu
+const menu_btn = document.querySelector('#menu');
+
+menu_btn.addEventListener('click', displayMenu);
+
+
+// Display Contact
+const contact_btn = document.querySelector('#contact');
+
+// contact_btn.addEventListener('click', displayContact);
