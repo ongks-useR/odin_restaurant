@@ -139,3 +139,50 @@ header > nav > button:hover {
     height: 80px;
     width: 80px;
 }
+
+
+/* Contact */
+
+#location {
+    width: 50vw;
+    margin: 20px auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 10px;
+}
+
+.outlet {
+    padding: 10px;
+}
+
+.name {
+    margin: 5px 0;
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.name,
+.contact,
+.operating-hours {
+    color: chocolate;
+}
+
+.contact,
+.operating-hours,
+address {
+    margin: 5px 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+#location span {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
