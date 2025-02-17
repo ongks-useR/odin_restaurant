@@ -151,7 +151,89 @@ const displayContact = function () {
     // Set border bottom of Contact
     this.style.cssText = "border-bottom: 3px solid burlywood;"
 
+    const outlets = [
+        {
+            name: 'Subang Parade',
+            address: `
+                LOT10EFH, Lower Ground Floor, Subang Parade,
+                No.5, Jalan SS16/1 Subang Parade,
+                47500, Subang Jaya, Malaysia
+            `,
+            contact: '03-56370121',
+        },
+        {
+            name: 'AEON Mall Shah Alam',
+            address: `
+                Lot G-03, Ground Floor,
+                AEON Mall Shah Alam,
+                No. 1, Jalan Akuatik 13/64, Seksyen 13,
+                40100 Shah Alam, Selangor, Malaysia
+            `,
+            contact: '03-55234520',
+        },
+        {
+            name: 'Mid Valley Megamall',
+            address: `
+                LG-060 Lower Ground Floor,
+                Mid Valley Megamall, Lingakaran Syed Putra,
+                59200, Kuala Lumpur, Malaysia
+            `,
+            contact: '03 22014633',
+        },
+        {
+            name: 'Sunway Putra Mall',
+            address: `
+                LG-17, Lower Ground Floor,
+                Putra Place Sunway Putra Mall,
+                100 Jalan Putra,
+                50350, Kuala Lumpur, Malaysia
+            `,
+            contact: '03-40503539',
+        }
+    ]
+
     const contents = document.querySelector("#content");
+
+    const heading = document.createElement('h2');
+    heading.textContent = 'Outlets Nearby You';
+
+    const outlet_list = document.createElement('div');
+    outlet_list.setAttribute('id', 'location');
+
+    contents.textContent = ""; // Clear the contents in Home page
+    contents.appendChild(heading);
+    contents.appendChild(outlet_list);
+
+    outlets.forEach(i => {
+
+        const name = document.createElement('p');
+        name.setAttribute('class', 'name');
+        name.textContent = i.name;
+
+        const address = document.createElement('address');
+        address.textContent = i.address;
+
+        const contact = document.createElement('p');
+        contact.setAttribute('class', 'contact');
+        contact.innerHTML = `Contact: <span>${i.contact}</span>`;
+
+        const operating_hours = document.createElement('p');
+        operating_hours.setAttribute('class', 'operating-hours');
+        operating_hours.innerHTML = `
+            Operating Hours: <br>
+            <span>Mon-Fri 11:00 AM – 10:00 PM</span> <br>
+            <span>Sat-Sun 11:00 AM – 10:00 PM</span>
+        `
+
+        const outlet = document.createElement('div');
+        outlet.setAttribute('class', 'outlet');
+        outlet.appendChild(name);
+        outlet.appendChild(address);
+        outlet.appendChild(contact);
+        outlet.appendChild(operating_hours);
+
+        outlet_list.appendChild(outlet);
+    })
 };
 
 
