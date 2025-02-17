@@ -45,4 +45,4 @@ menu_btn.addEventListener('click', displayMenu);
 // Display Contact
 const contact_btn = document.querySelector('#contact');
 
-// contact_btn.addEventListener('click', displayContact);
+contact_btn.addEventListener('click', displayContact);
