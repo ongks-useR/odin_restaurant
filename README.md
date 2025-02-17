@@ -3,4 +3,7 @@
 
 Objectives:  
 --> Setup JavaScript Webpack  
---> Use Webpack to build restaurant page
+--> Use Webpack to build restaurant page  
+
+Note:  
+1. This is a clone of `The Manhattan Fish Market`.
