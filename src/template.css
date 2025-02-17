@@ -18,6 +18,11 @@ header {
     display: flex;
     align-items: center;
     padding: 15px 0;
+
+    /* Make the header always stick at the top of page */
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
 
 #trade-mark {
@@ -185,4 +190,23 @@ address {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
     font-weight: 300;
+}
+
+
+/* footer */
+footer {
+    height: 10vh;
+    font-family: "Work Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    padding: 20px;
 }
